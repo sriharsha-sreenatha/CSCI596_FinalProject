@@ -19,13 +19,22 @@ Recent detection methods of COVID-19 disease involves CNN models capturing modal
 <h2>Method</h2>
 <h3>DataSet</h3>
 The dataset[3] consists of labeled X-ray(PA-CXR) images of COVID-19, bacterial and viral pneumonia patients, and Normal people. 
-Normal: 
-Pneumonia:
-COVID-19: 
+
+Normal:
+<img src="https://user-images.githubusercontent.com/28820837/146003836-239eb619-9930-4607-8ffe-065712e4b4ff.jpg" data-canonical-src="https://user-images.githubusercontent.com/28820837/146003836-239eb619-9930-4607-8ffe-065712e4b4ff.jpg" width="100" height="100" />
+
+Pneumonia: 
+<img src="https://user-images.githubusercontent.com/28820837/146003883-dec5ac34-5599-4df6-9c82-1d8d2705524f.jpg" data-canonical-src="https://user-images.githubusercontent.com/28820837/146003883-dec5ac34-5599-4df6-9c82-1d8d2705524f.jpg" width="100" height="100" />
+
+COVID-19:
+<img src="https://user-images.githubusercontent.com/28820837/146002877-7280fd5c-c2b0-4088-a5c5-18e77ff8d02b.jpg" data-canonical-src="https://user-images.githubusercontent.com/28820837/146002877-7280fd5c-c2b0-4088-a5c5-18e77ff8d02b.jpg" width="100" height="100" />
+
 
 <h3>Model</h3>
 
 <h3>Grad-CAM</h3>
+Gradient-weighted Class Activation Mapping (GradCAM) uses the gradients of any target concept, flowing into the final convolutional layer to produce a coarse localization map highlighting the important regions in the image for predicting the concept.
+
 <h4>Architecture</h4>
 On the trained model, perform below steps:
 
