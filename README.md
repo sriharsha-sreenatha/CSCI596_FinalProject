@@ -1,9 +1,11 @@
 # Explainable AI - Visualing Convolutional Neural Network using Grad-CAM: Gradient-weighted Class Activation Mapping
 This repository is for the final project of CSCI596 - Scientific Computing and Visualization.
 
+_Madhura Murulidhar (USC-ID: 4732217557), Sriharsha Sreenatha (USC-ID: 1357016181)_
+
 <h2>Motivation/Abstract</h2>
 
-Machine Learning and AI models are witnessing its use in various domains like Healthcare, FinTech, Physics, Aerospace etc. Though these models are capable of giving accurate solutions, developers who designed it cannot explain and understand why the model arrived at particular decision which makes the model a 'black-box'. Explainable AI helps in demystifying the models. This study concentrates on Grad-CAM: Gradient-weighted Class Activation Mapping which will enable humans to understand what features/parts of the image Convolutional Neural Network is looking at. 
+Machine Learning and AI models are witnessing its use in various domains like Healthcare, FinTech, Physics, Aerospace etc. Though these models are capable of giving accurate solutions, developers who designed it cannot explain and understand why the model arrived at particular decision which makes the model a 'black-box'. Explainable AI helps in demystifying the models. This study concentrates on Grad-CAM: Gradient-weighted Class Activation Mapping[1] which will enable humans to understand what features/parts of the image Convolutional Neural Network is looking at. 
 
 Recent detection methods of COVID-19 disease involves CNN models capturing modal features from chest X-rays images. There can be cases where model predicts false-positives. We can apply this study to produce a heat-map on the X-ray images to understand why and how CNN model gave the decision.
 
@@ -50,9 +52,12 @@ On the trained model, perform below steps:
 ![network](https://user-images.githubusercontent.com/13382099/143785350-2d6ca00a-64dc-4617-903c-c99d5f72a6f4.png)
 
 <h2>Results</h2>
+
 The CNN model to detect COVID-19 disease from X-ray images showed:
-**Training accuracy: 91.7%
-Validation accuracy: 93.17%**
+
+**Training accuracy: 91.7%**
+
+**Validation accuracy: 93.17%**
 
 <ol>
 <li>A random X-ray image of type='NORMAL' was selected from the test dataset.</li>
@@ -61,13 +66,23 @@ Validation accuracy: 93.17%**
   <h4> Observation </h4>
     From results, it can be seen that there can be false positive predictions. Visualizing why the model predicted using Grad-CAM is helpful for further investigation than blindly accepting model's prediction. With this study, the model's performance can be optimized by looking at where the model is going wrong.
 </ol>
+
+Image of type 'NORMAL'
+
+<img src="https://user-images.githubusercontent.com/28820837/146004959-a93c03b1-295d-43a0-acff-90df51ecb350.png" data-canonical-src="https://user-images.githubusercontent.com/28820837/146004959-a93c03b1-295d-43a0-acff-90df51ecb350.png" width="250" height="250" /> 
+
+Predicted as 'PNEUMONIA' - Grad-CAM Heatmap
+
+<img src="https://user-images.githubusercontent.com/28820837/146004987-26ed8759-870b-495a-b138-6e94cf42fcd5.png" data-canonical-src="https://user-images.githubusercontent.com/28820837/146004987-26ed8759-870b-495a-b138-6e94cf42fcd5.png" width="250" height="250" /> 
   
 <h2>Future Goals</h2>
 
 ![image](https://user-images.githubusercontent.com/13382099/143785469-9187ed0e-e240-4a45-9105-9aee430c1e0f.png)
 
 <h2> Author Contribution </h2>
-Madhura Murulidhar:
+
+Madhura Murulidhar (USC-ID: 4732217557):
+
 - Researched and understood Explainable AI.
 - Explored Grad-CAM.
 - Implemented Grad-CAM on pre-loaded VGG-16 model for sample picture of lion.
@@ -75,7 +90,8 @@ Madhura Murulidhar:
 - Observed the results.
 - Report creation
 
-Sriharsha Sreenatha:
+Sriharsha Sreenatha (USC-ID: 1357016181):
+
 - Researched and understood Explainable AI.
 - Developed model using Transfer Learning from VGG-16.
 - Trained model and tested for few images in test dataset.
