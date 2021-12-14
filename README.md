@@ -6,7 +6,7 @@ This repository is for the final project of CSCI596 - Scientific Computing and V
 
 <h2>Motivation/Abstract</h2>
 
-Machine Learning and AI models are witnessing its use in various domains like Healthcare, FinTech, Physics, Aerospace etc. Though these models are capable of giving accurate solutions, developers who designed it cannot explain and understand why the model arrived at particular decision which makes the model a 'black-box'. Explainable AI helps in demystifying the models. This study concentrates on Grad-CAM: Gradient-weighted Class Activation Mapping[1] which will enable humans to understand what features/parts of the image Convolutional Neural Network is looking at. 
+Machine Learning and AI models are witnessing its use in various domains like Healthcare, FinTech, Physics, Aerospace etc. Though these models are capable of giving accurate solutions, developers who designed it cannot explain and understand why the model arrived at particular decision which makes the model a 'black-box'. Explainable AI helps in demystifying such models. This study concentrates on Grad-CAM: Gradient-weighted Class Activation Mapping[1] which will enable humans to understand what features/parts of the image Convolutional Neural Network(CNN) is looking at. 
 
 Recent detection methods of COVID-19 disease involves CNN models capturing modal features from chest X-rays images. There can be cases where model predicts false-positives. We can apply this study to produce a heat-map on the X-ray images to understand why and how CNN model gave the decision.
 
@@ -21,7 +21,7 @@ Recent detection methods of COVID-19 disease involves CNN models capturing modal
 
 <h2>Method</h2>
 <h3>DataSet</h3>
-The dataset[3] consists of labeled X-ray(PA-CXR) images of COVID-19, bacterial and viral pneumonia patients, and Normal people. 
+The dataset[3] consists of labeled X-ray(PA-CXR) images of COVID-19, bacterial and viral Pneumonia patients, and Normal people. 
 <br/><br/>
 
 | Normal   |  Pneumonia    |  COVID-19 |
