@@ -12,19 +12,33 @@ Recent detection methods of COVID-19 disease involves CNN models capturing modal
   <li> Python 3 </li>
   <li> Google Colab </li>
   <li> Tensorflow v2.7.0 </li>
-  <li> VGG-16 model </li>
+  <li> VGG-16 model [2] </li>
   <li> Keras </li>
 </ul>
 
 <h2>Method</h2>
 <h3>DataSet</h3>
-The dataset[2] consists of labeled X-ray(PA-CXR) images of COVID-19, bacterial and viral pneumonia patients, and Normal people. 
-Normal: ![image](https://user-images.githubusercontent.com/28820837/145994648-1fe8f854-7ac1-40e3-9a70-11e1f8367d6e.png)
+The dataset[3] consists of labeled X-ray(PA-CXR) images of COVID-19, bacterial and viral pneumonia patients, and Normal people. 
+Normal: 
 Pneumonia:
 COVID-19: 
 
 <h3>Model</h3>
+
 <h3>Grad-CAM</h3>
+<h4>Architecture</h4>
+On the trained model, perform below steps:
+
+- Load an image 
+- Infer the image and get the topmost class index
+- Take the output of the final convolutional layer
+- Compute the gradient of the class output value w.r.t to feature maps
+- Pool the gradients over all the axes leaving out the channel dimension
+- Weigh the output feature map with the computed gradients (+ve)
+- Average the weighted feature maps along channels
+- Normalize the heat map to make the values between 0 and 1
+
+![network](https://user-images.githubusercontent.com/13382099/143785350-2d6ca00a-64dc-4617-903c-c99d5f72a6f4.png)
 
 <h2>Results</h2>
 The CNN model to detect COVID-19 disease from X-ray images showed:
@@ -33,17 +47,19 @@ Validation accuracy: 93.17%**
 
 <ol>
 <li>A random X-ray image of type='NORMAL' was selected from the test dataset.</li>
-  <li>Model predicted the as type 'PNEUMONIA' which was false positive.</li>
-<li>Grad-CAM visualization heatmap was produced on the image to see where the last convolution layer of the model was extracting features. </li> </ol>
-![image](https://user-images.githubusercontent.com/28820837/145995430-a2ce0211-871c-42b2-81f1-e9cf620cff5d.png) ![image](https://user-images.githubusercontent.com/28820837/145995450-5bab363d-7adf-4e2a-bf5a-847609ab16b0.png)
-
+<li>Model predicted the as type 'PNEUMONIA' which was false positive.</li>
+<li>Grad-CAM visualization heatmap was produced on the image to see where the last convolution layer of the model was extracting features. </li>
+  <h4> Observation </h4>
+    From results, it can be seen that there can be false positive predictions. Visualizing why the model predicted using Grad-CAM is helpful for further investigation than blindly accepting model's prediction. With this study, the model's performance can be optimized by looking at where the model is going wrong.
+</ol>
   
 <h2>Future Goals</h2>
 <h2>References</h2>
 <ol>
-<li> Grad-CAM: Visual Explanations from Deep Networks via Gradient-Based Localization. International Journal of Computer Vision, no. 2 (2020): 336-359.
+<li> Ramprasaath R. Selvaraju et al., 2019 Grad-CAM: Visual Explanations from Deep Networks via Gradient-Based Localization. International Journal of Computer Vision, no. 2 (2020): 336-359.
   https://arxiv.org/pdf/1610.02391v4.pdf </li>
-<li> Identifying Medical Diagnoses and Treatable Diseases by Image-Based Deep Learning
+  <li> K. Simonyan, A. Zisserman, Very Deep Convolutional Networks for Large-Scale Image Recognition. International Conference on Learning Representations, 2015. </li>
+<li> S. Daniel, G. Michael et al., Identifying Medical Diagnoses and Treatable Diseases by Image-Based Deep Learning
 2018: Cell, Volume: 172, Issue: 5, pp 1122-1131  DOI: 10.1016/J.CELL.2018.02.010 https://www.cell.com/cell/fulltext/S0092-8674(18)30154-5 </li>
 </ol>
 ****
