@@ -1,7 +1,8 @@
 # Explainable AI - Visualing Convolutional Neural Network using Grad-CAM: Gradient-weighted Class Activation Mapping
 This repository is for the final project of CSCI596 - Scientific Computing and Visualization.
 
-_Madhura Murulidhar (USC-ID: 4732217557), Sriharsha Sreenatha (USC-ID: 1357016181)_
+- _Madhura Murulidhar (USC-ID: 4732217557)_
+- _Sriharsha Sreenatha (USC-ID: 1357016181)_
 
 <h2>Motivation/Abstract</h2>
 
