@@ -1,7 +1,5 @@
-# CSCI596_FinalProject
+# Grad-CAM: Gradient-weighted Class Activation Mapping - Visual Explanations from Deep Networks via Gradient-based Localization
 This repository is for the final project of CSCI596 - Scientific Computing and Visualization.
-
-**Grad-CAM: Gradient-weighted Class Activation Mapping - Visual Explanations from Deep Networks via Gradient-based Localization**
 
 <h2>Motivation/Abstract</h2>
 
