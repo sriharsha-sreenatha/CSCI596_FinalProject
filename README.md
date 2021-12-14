@@ -54,6 +54,8 @@ Validation accuracy: 93.17%**
 </ol>
   
 <h2>Future Goals</h2>
+![image](https://user-images.githubusercontent.com/13382099/143785469-9187ed0e-e240-4a45-9105-9aee430c1e0f.png)
+
 <h2>References</h2>
 <ol>
 <li> Ramprasaath R. Selvaraju et al., 2019 Grad-CAM: Visual Explanations from Deep Networks via Gradient-Based Localization. International Journal of Computer Vision, no. 2 (2020): 336-359.
@@ -62,23 +64,3 @@ Validation accuracy: 93.17%**
 <li> S. Daniel, G. Michael et al., Identifying Medical Diagnoses and Treatable Diseases by Image-Based Deep Learning
 2018: Cell, Volume: 172, Issue: 5, pp 1122-1131  DOI: 10.1016/J.CELL.2018.02.010 https://www.cell.com/cell/fulltext/S0092-8674(18)30154-5 </li>
 </ol>
-****
-Link to paper: https://arxiv.org/pdf/1610.02391v4.pdf
-
-Architecture
-
-![network](https://user-images.githubusercontent.com/13382099/143785350-2d6ca00a-64dc-4617-903c-c99d5f72a6f4.png)
-
-Visualization of each layer
-
-![image](https://user-images.githubusercontent.com/13382099/143785580-a7833f13-4102-4a00-9d8e-dfcca741413f.png)
-
-Last layer - For class: Glasses
-
-![image](https://user-images.githubusercontent.com/28820837/143785818-7db4d0a1-4546-4634-8cd9-b3c2109777e2.png)
-![image](https://user-images.githubusercontent.com/28820837/143785833-c13b9077-caf1-4c55-9ddc-682c65aeb349.png)
-
-
-Where to go from here? Use-cases
-
-![image](https://user-images.githubusercontent.com/13382099/143785469-9187ed0e-e240-4a45-9105-9aee430c1e0f.png)
