@@ -1,4 +1,4 @@
-# Grad-CAM: Gradient-weighted Class Activation Mapping - Visual Explanations from Deep Networks via Gradient-based Localization
+# Explainable AI - Visualing Convolutional Neural Network using Grad-CAM: Gradient-weighted Class Activation Mapping
 This repository is for the final project of CSCI596 - Scientific Computing and Visualization.
 
 <h2>Motivation/Abstract</h2>
