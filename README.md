@@ -3,6 +3,12 @@ This repository is for the final project of CSCI596 - Scientific Computing and V
 
 **Grad-CAM: Gradient-weighted Class Activation Mapping - Visual Explanations from Deep Networks via Gradient-based Localization**
 
+**Motivation/Abstract**
+
+Machine Learning and AI models are witnessing its use in various domains like Healthcare, FinTech, Physics, Aerospace etc. Though these models are capable of giving accurate solutions, developers who designed it cannot explain and understand why the model arrived at particular decision which makes the model a 'black-box'. Explainable AI helps in demystyfying the models. This study concentrates on Grad-CAM: Gradient-weighted Class Activation Mapping which will enable humans to understand what features/parts of the image Convolutional Neural Network is looking at. 
+
+Recent detection methods of COVID-19 disease involves CNN models capturing modal features from chest X-rays images. There can be cases where model predicts false-positives. We can apply this study to produce a heat-map on the X-ray images to understand why and how CNN model gave the decision.
+
 Link to paper: https://arxiv.org/pdf/1610.02391v4.pdf
 
 Architecture
