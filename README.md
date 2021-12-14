@@ -54,7 +54,25 @@ Validation accuracy: 93.17%**
 </ol>
   
 <h2>Future Goals</h2>
+
 ![image](https://user-images.githubusercontent.com/13382099/143785469-9187ed0e-e240-4a45-9105-9aee430c1e0f.png)
+
+<h2> Author Contribution </h2>
+Madhura Murulidhar:
+- Researched and understood Explainable AI.
+- Explored Grad-CAM.
+- Implemented Grad-CAM on pre-loaded VGG-16 model for sample picture of lion.
+- Preprocessed X-ray image dataset.
+- Observed the results.
+- Report creation
+
+Sriharsha Sreenatha:
+- Researched and understood Explainable AI.
+- Developed model using Transfer Learning from VGG-16.
+- Trained model and tested for few images in test dataset.
+- Produced heatmap on one of the image of test data.
+- Observed the results.
+- Report creation.
 
 <h2>References</h2>
 <ol>
