@@ -22,18 +22,19 @@ Recent detection methods of COVID-19 disease involves CNN models capturing modal
 <h2>Method</h2>
 <h3>DataSet</h3>
 The dataset[3] consists of labeled X-ray(PA-CXR) images of COVID-19, bacterial and viral pneumonia patients, and Normal people. 
+<br/><br/>
 
-Normal:
-<img src="https://user-images.githubusercontent.com/28820837/146003836-239eb619-9930-4607-8ffe-065712e4b4ff.jpg" data-canonical-src="https://user-images.githubusercontent.com/28820837/146003836-239eb619-9930-4607-8ffe-065712e4b4ff.jpg" width="100" height="100" />
-
-Pneumonia: 
-<img src="https://user-images.githubusercontent.com/28820837/146003883-dec5ac34-5599-4df6-9c82-1d8d2705524f.jpg" data-canonical-src="https://user-images.githubusercontent.com/28820837/146003883-dec5ac34-5599-4df6-9c82-1d8d2705524f.jpg" width="100" height="100" />
-
-COVID-19:
-<img src="https://user-images.githubusercontent.com/28820837/146002877-7280fd5c-c2b0-4088-a5c5-18e77ff8d02b.jpg" data-canonical-src="https://user-images.githubusercontent.com/28820837/146002877-7280fd5c-c2b0-4088-a5c5-18e77ff8d02b.jpg" width="100" height="100" />
-
+| Normal   |  Pneumonia    |  COVID-19 |
+|----------|---------------|-----------|
+| <img src="https://user-images.githubusercontent.com/28820837/146003836-239eb619-9930-4607-8ffe-065712e4b4ff.jpg" data-canonical-src="https://user-images.githubusercontent.com/28820837/146003836-239eb619-9930-4607-8ffe-065712e4b4ff.jpg" width="200" height="200" /> | <img src="https://user-images.githubusercontent.com/28820837/146003883-dec5ac34-5599-4df6-9c82-1d8d2705524f.jpg" data-canonical-src="https://user-images.githubusercontent.com/28820837/146003883-dec5ac34-5599-4df6-9c82-1d8d2705524f.jpg" width="200" height="200" /> | <img src="https://user-images.githubusercontent.com/28820837/146002877-7280fd5c-c2b0-4088-a5c5-18e77ff8d02b.jpg" data-canonical-src="https://user-images.githubusercontent.com/28820837/146002877-7280fd5c-c2b0-4088-a5c5-18e77ff8d02b.jpg" width="200" height="200" /> |
 
 <h3>Model</h3>
+
+The model consists of 3 convolutional layers followed by max-pooling layers with ReLU activation. The input to the model is an image of size 400x400. The output of the model is a 3-way classification between Normal, COVID-19 and Pnuemonia classes.
+
+The following image describes the Convolutional Nueral Network(CNN) model.
+
+<img src="https://user-images.githubusercontent.com/13382099/146015723-41ace1e2-7e3f-4164-a002-aba726a6300d.png" width="800" height="450" />
 
 <h3>Grad-CAM</h3>
 Gradient-weighted Class Activation Mapping (GradCAM) uses the gradients of any target concept, flowing into the final convolutional layer to produce a coarse localization map highlighting the important regions in the image for predicting the concept.
@@ -50,7 +51,7 @@ On the trained model, perform below steps:
 - Average the weighted feature maps along channels
 - Normalize the heat map to make the values between 0 and 1
 
-![network](https://user-images.githubusercontent.com/13382099/143785350-2d6ca00a-64dc-4617-903c-c99d5f72a6f4.png)
+<img src="https://user-images.githubusercontent.com/13382099/143785350-2d6ca00a-64dc-4617-903c-c99d5f72a6f4.png" width="800" height="450" />
 
 <h2>Results</h2>
 
@@ -64,21 +65,28 @@ The CNN model to detect COVID-19 disease from X-ray images showed:
 <li>A random X-ray image of type='NORMAL' was selected from the test dataset.</li>
 <li>Model predicted the as type 'PNEUMONIA' which was false positive.</li>
 <li>Grad-CAM visualization heatmap was produced on the image to see where the last convolution layer of the model was extracting features. </li>
-  <h4> Observation </h4>
-    From results, it can be seen that there can be false positive predictions. Visualizing why the model predicted using Grad-CAM is helpful for further investigation than blindly accepting model's prediction. With this study, the model's performance can be optimized by looking at where the model is going wrong.
 </ol>
 
-Image of type 'NORMAL'
+<h4> Observation </h4>
+    From results, it can be seen that there can be false positive predictions. Visualizing why the model predicted using Grad-CAM is helpful for further investigation than blindly accepting model's prediction. With this study, the model's performance can be optimized by looking at where the model is going wrong.
+<br/><br/>
 
-<img src="https://user-images.githubusercontent.com/28820837/146004959-a93c03b1-295d-43a0-acff-90df51ecb350.png" data-canonical-src="https://user-images.githubusercontent.com/28820837/146004959-a93c03b1-295d-43a0-acff-90df51ecb350.png" width="250" height="250" /> 
+| Image of type 'NORMAL' | Predicted as 'PNEUMONIA' - Grad-CAM Heatmap |
+|:----------------------:|:-------------------------------------------:|
+| <img src="https://user-images.githubusercontent.com/28820837/146004959-a93c03b1-295d-43a0-acff-90df51ecb350.png" data-canonical-src="https://user-images.githubusercontent.com/28820837/146004959-a93c03b1-295d-43a0-acff-90df51ecb350.png" width="250" height="250" /> | <img src="https://user-images.githubusercontent.com/28820837/146004987-26ed8759-870b-495a-b138-6e94cf42fcd5.png" data-canonical-src="https://user-images.githubusercontent.com/28820837/146004987-26ed8759-870b-495a-b138-6e94cf42fcd5.png" width="250" height="250" /> |
 
-Predicted as 'PNEUMONIA' - Grad-CAM Heatmap
+<h2>Use cases</h2>
 
-<img src="https://user-images.githubusercontent.com/28820837/146004987-26ed8759-870b-495a-b138-6e94cf42fcd5.png" data-canonical-src="https://user-images.githubusercontent.com/28820837/146004987-26ed8759-870b-495a-b138-6e94cf42fcd5.png" width="250" height="250" /> 
-  
-<h2>Future Goals</h2>
+Explainable AI such as visualizing output of the Machine Learning model (using Grad-CAM and other techniques) can be used to improve the accuracy of the model. The visualization also helps better understanding of how the model is arriving at the decision. Some of the uses where visualization can have impact are listed below.
 
-![image](https://user-images.githubusercontent.com/13382099/143785469-9187ed0e-e240-4a45-9105-9aee430c1e0f.png)
+- Detection of diseases using medical images. (Our example, detection of COVID-19 using X-Ray images)
+- Detection and elimination of racial bias.
+- Detection and elimination of gender bias in profession classification. (Example of using Grad-CAM provided below)  
+- Feature set detection in models used for fake currency classification.
+
+And many more...
+
+<img src="https://user-images.githubusercontent.com/13382099/143785469-9187ed0e-e240-4a45-9105-9aee430c1e0f.png" data-canonical-src="https://user-images.githubusercontent.com/13382099/143785469-9187ed0e-e240-4a45-9105-9aee430c1e0f.png" width="450" height="300" />
 
 <h2> Author Contribution </h2>
 
